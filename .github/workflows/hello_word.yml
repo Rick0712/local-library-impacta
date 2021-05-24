@@ -20,21 +20,21 @@ jobs:
 
     steps:
       - name: Passo 1
-        run: date
+        run: env | sort
         
   job2:
     name: Segundo Job
     runs-on: windows-latest
     steps:
       - name: Passo 2
-        run: date
+        run: "Get-ChildItem Env: | Sort-Object Name"
         
   job3:
     name: Terceiro Job
     runs-on: macos-latest
     steps:
       - name: Passo 3
-        run: date
+        run: echo Passo final
  
 job4:
     name: Quarto Job
