@@ -32,11 +32,10 @@ jobs:
   job3:
     name: Terceiro Job
     runs-on: macos-latest
-    needs: [job1, job2]
-    
     steps:
-      - name: Ultimo passo
+      - name: Passo 1
         run: date
+ 
 job4:
     name: Quarto Job
     runs-on: ubuntu-latest
