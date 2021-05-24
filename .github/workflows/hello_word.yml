@@ -26,14 +26,14 @@ jobs:
     name: Segundo Job
     runs-on: windows-latest
     steps:
-      - name: Passo 1
+      - name: Passo 2
         run: date
         
   job3:
     name: Terceiro Job
     runs-on: macos-latest
     steps:
-      - name: Passo 1
+      - name: Passo 3
         run: date
  
 job4:
