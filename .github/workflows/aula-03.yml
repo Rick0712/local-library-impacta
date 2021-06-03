@@ -3,11 +3,10 @@ name: Aula 03 exercicio 2
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
     
 env:
   WORKFLOW_VAR: 'Minha variavel no escopo do Workflow'
+  App: 'App do Rick'
 
 jobs:
   build:
@@ -29,7 +28,7 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
       with:
-        name: app-do-rick
+        name: ${{ env.App }}
         path: .
         if-no-files-found: error
         retention-days: 7
