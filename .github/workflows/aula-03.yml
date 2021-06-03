@@ -28,4 +28,9 @@ jobs:
     
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
+      with:
+        name: app-do-rick
+        path: .
+        if-no-files-found: error
+        retention-days: 3
       
