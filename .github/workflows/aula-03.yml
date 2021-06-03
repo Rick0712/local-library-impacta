@@ -32,5 +32,5 @@ jobs:
         name: app-do-rick
         path: .
         if-no-files-found: error
-        retention-days: 3
+        retention-days: 7
       
