@@ -1,4 +1,4 @@
-name: Aula 03
+name: Aula 03 exercicio 2
 
 on:
   push:
@@ -7,19 +7,19 @@ on:
     branches: [ main ]
     
 env:
-  WORKFLOW_VAR: 'minha variavel no escopo do workflow'
+  WORKFLOW_VAR: 'Minha variavel no escopo do Workflow'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
       NODE_VERSION: 12
-      JOB_VAR: 'minha variavel no escopo do job'
+      JOB_VAR: 'Minha variavel no escopo do job que esta dentro do workflow'
       
     steps:
     
     - name: Checkout
-      uses: actions/checkout@v2.3.4
+      uses: actions/checkout@v2.3.3
     
     - name: Use Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v2
@@ -27,9 +27,5 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
     
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2.2.3
-      with:
-        name: app-do-rick
-        path: .
-        if-no-files-found: error
-        retention-days: 3
+      uses: actions/upload-artifact@v2.2.4
+      
